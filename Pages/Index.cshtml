@@ -1,0 +1,38 @@
+﻿@page
+@model TodoApp.Pages.IndexModel
+@{
+    ViewData["Title"] = "Todo List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" asp-page-handler="Add">
+    <div class="form-group">
+        <label for="newTodoName">New Todo</label>
+        <input type="text" id="newTodoName" name="name" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+<h3>Todo Items</h3>
+<ul class="list-unstyled">
+    @foreach (var item in Model.TodoItems)
+    {
+        <li class="d-flex align-items-center mb-2">
+            <form method="post" asp-page-handler="ToggleComplete" style="margin: 0;">
+                <input type="hidden" name="id" value="@item.Id" />
+                <button type="submit" class="btn @(item.IsComplete ? "btn-success" : "btn-outline-secondary") rounded-circle" style="width: 20px; height: 20px; padding: 0;">
+                </button>
+            </form>
+            <span class="ms-2 @(!item.IsComplete ? "" : "text-decoration-line-through")">
+                @item.Name
+            </span>
+            <form method="post" asp-page-handler="Delete" style="margin-left: auto;">
+                <input type="hidden" name="id" value="@item.Id" />
+                <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </form>
+        </li>
+    }
+</ul>
