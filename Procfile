@@ -1,1 +1,1 @@
-web: dotnet watch run
+web: dotnet TodoApp.dll
