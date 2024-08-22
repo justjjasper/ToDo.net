@@ -17,7 +17,7 @@ namespace TodoApp.Pages
             _context = context;
         }
 
-        public IList<TodoItem> TodoItems { get; set; }
+        public IList<TodoItem> TodoItems { get; set; } = new List <TodoItem>();
 
         public async Task OnGetAsync()
         {

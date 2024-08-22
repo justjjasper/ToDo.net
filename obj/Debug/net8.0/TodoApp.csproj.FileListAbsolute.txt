@@ -102,3 +102,4 @@
 /Users/jasperbucad/Desktop/ToDo.net/TodoApp/obj/Debug/net8.0/TodoApp.pdb
 /Users/jasperbucad/Desktop/ToDo.net/TodoApp/obj/Debug/net8.0/TodoApp.genruntimeconfig.cache
 /Users/jasperbucad/Desktop/ToDo.net/TodoApp/obj/Debug/net8.0/ref/TodoApp.dll
+/Users/jasperbucad/Desktop/ToDo.net/TodoApp/obj/Debug/net8.0/TodoApp.sourcelink.json
